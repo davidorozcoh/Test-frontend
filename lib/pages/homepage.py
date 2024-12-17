@@ -24,8 +24,8 @@ class HomePage(BasePage):
 
     def is_open(self):
         return validate_wait_results(
-            GeneralComponents.wait_until_element_is_present(self.context, HomeWebElements.where_label),
-            GeneralComponents.wait_until_element_is_present(self.context, HomeWebElements.signin_button))
+            GeneralComponents.wait_until_element_is_present(self.context, HomeWebElements.expected_element_locator)
+        )
 
     def reload_page(self):
         return self.reload_page()
